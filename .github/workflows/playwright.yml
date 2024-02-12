@@ -24,7 +24,7 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Run Playwright tests
-        run: npx playwright test -g '${{github.event.inputs.environment}}' && set runEnv=${{github.event.inputs.runEnv}}
+        run: npx playwright test -g '${{github.event.inputs.tags}}' && set runEnv=${{github.event.inputs.runEnv}}
       - name: print data 
         run: echo "${{github.event.inputs.environment}}"
       - uses: actions/upload-artifact@v3
