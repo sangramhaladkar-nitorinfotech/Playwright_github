@@ -1,6 +1,6 @@
 name: Playwright Tests
 'on':
-  workflow_dispatch:
+  push:
     inputs:
       environment:
         description: Define your tags 
@@ -22,7 +22,7 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test -g '${{github.event.inputs.environment}}'
       - name: print data 
-        run: echo ""${{github.event.inputs.environment}}""
+        run: echo "${{github.event.inputs.environment}}"
       - uses: actions/upload-artifact@v3
         if: always()
         with:
