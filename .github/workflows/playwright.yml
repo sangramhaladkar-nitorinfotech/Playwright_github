@@ -26,7 +26,7 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test -g '${{github.event.inputs.tags}}' && set runEnv=${{github.event.inputs.runEnv}}
       - name: print data 
-        run: echo "${{github.event.inputs.environment}}"
+        run: echo "${{github.event.inputs.tags}}"
       - uses: actions/upload-artifact@v3
         if: always()
         with:
