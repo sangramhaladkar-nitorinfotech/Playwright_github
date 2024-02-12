@@ -23,8 +23,8 @@ jobs:
         run: npm ci
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
-        echo "Env: '${{ github.event.inputs.environment }}"'
-        echo "Branch: '${{ github.event.inputs.branch }}"'
+        run: echo "Env: '${{ github.event.inputs.environment }}"'
+        run: echo "Branch: '${{ github.event.inputs.branch }}"'
       - name: Run Playwright tests
         run: npx playwright test
       - uses: actions/upload-artifact@v3
