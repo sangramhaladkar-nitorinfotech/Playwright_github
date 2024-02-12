@@ -1,6 +1,6 @@
 name: Playwright Tests
 'on':
-  push:
+  workflow_dispatch:
     inputs:
       environment:
         description: Define your tags 
