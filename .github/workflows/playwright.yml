@@ -1,4 +1,4 @@
-name: Playwright Tests
+name: Manual trigger - Github Actions Test Workflow
 'on':
   workflow_dispatch:
     inputs:
